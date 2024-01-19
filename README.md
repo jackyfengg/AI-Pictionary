@@ -6,3 +6,4 @@
 
 - As a user I want to be able to generate prompts
 
+-As a user I want to be able to guess the generated picture
