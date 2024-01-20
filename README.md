@@ -1,5 +1,8 @@
 # Gartic-Telephone-Project
 
+***Project Description:***
+ We aim to elevate the user experience of the popular drawing and guessing game. Our focus is on incorporating valuable user stories to create a seamless and enjoyable gaming environment for players and participants alike.
+
 ## User Stories:
 
 - As a player, I want to easily create a new Gartic Telephone game session, specifying the number of rounds and players, to customize the gaming experience.
