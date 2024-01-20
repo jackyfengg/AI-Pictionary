@@ -1,6 +1,7 @@
 from flask import Flask
 import flask
 import json
+from flask_cors import CORS
 
 app = Flask('backend')
 
@@ -8,6 +9,7 @@ app = Flask('backend')
 def users():
     with open("data.json", "r") as databit:
         data = json.load(databit)
+        CORS(app)
         
     return flask.jsonify(data)
 
