@@ -3,6 +3,7 @@ from openai import OpenAI
 from IPython.display import Image, display
 import flask
 import json
+from flask_cors import CORS
 
 app = Flask('backend')
 client = OpenAI()
@@ -31,6 +32,7 @@ def hello():
 def users():
     with open("data.json", "r") as databit:
         data = json.load(databit)
+        CORS(app)
         
     return flask.jsonify(data)
 
