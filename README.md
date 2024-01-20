@@ -1,6 +1,6 @@
 # Gartic-Telephone-Project
 
-** User Stories:
+## User Stories:
 
 - As a player, I want to easily create a new Gartic Telephone game session, specifying the number of rounds and players, to customize the gaming experience.
 
