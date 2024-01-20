@@ -25,4 +25,4 @@
 
 - As a player, I want a scoring system that reflects the accuracy of guesses and the creativity of drawings, adding a competitive element to the game and encouraging friendly competition among participants.
 
-- As a participant, I want the ability to replay or review the entire Gartic Telephone game session, allowing us to relive the fun moments and appreciate the progression of drawings and guesses.
+- As a participant, I want the ability to replay or review the entire Gartic Telephone game session, allowing us to relive the fun moments and appreciate the progression of drawings and guesses. test
