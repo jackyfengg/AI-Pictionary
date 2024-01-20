@@ -5,7 +5,7 @@
 
 ## User Stories:
 
-- As a player, I want to easily create a new Gartic Telephone game session, specifying the number of rounds and players, to customize the gaming experience.
+- As player, I want to easily create a new Gartic Telephone game session, specifying the number of rounds and players, to customize the gaming experience.
 
 - As a participant, I want the option to invite my friends to join the Gartic Telephone game through a simple and shareable link, ensuring a seamless and quick setup.
 
