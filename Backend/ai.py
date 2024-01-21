@@ -1,6 +1,5 @@
 import os
 from openai import OpenAI
-from IPython.display import Image, display
 import json
 
 OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY', "API NOT FOUND")
