@@ -24,7 +24,7 @@
 
     <!-- Picture -->
     <div id="imageContainer">
-        <img src="https://via.placeholder.com/300" alt="Sample Image" width="300" height="200">
+        <img id="sampleImage" alt="Sample Image" width="256" height="256">
     </div>
 
     <!-- Text Field -->
@@ -36,30 +36,36 @@
     <!-- Button -->
     <button id="submitButton">Submit</button>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
+        
         document.addEventListener('DOMContentLoaded', function () {
             // Get references to the text field and button elements.
             var textField = document.getElementById('textField');
             var submitButton = document.getElementById('submitButton');
+
+            sampleImage.src = window.globalVar;//!!! window.globalVar is 
+            //not in brackets and might not load
 
             // Add an event listener to the button.
             submitButton.addEventListener('click', function () {
                 // Get the value from the text field.
                 var enteredText = textField.value;
 
-                $.ajax({
-                    url: '/data', 
-                    type: 'POST', 
-                    data: {'data' : enteredText}, 
-                    success: function(response) {
-                        // get GPT generated image
-                        console.log(response);
-                    }, 
-                    error: function(error) {
-                        console.log(error);
-                    }
-                });
+                $.ajax({ 
+                url: '/data', 
+                type: 'POST', 
+                data: { 'data': enteredText}, 
+                success: function(response) { 
+                    console.log(response);
+                }, 
+                error: function(error) { 
+                    console.log(error); 
+                } 
+            }); 
+
+                // Perform your desired action with the entered text.
+                //alert('Entered Text: ' + enteredText);
+                //window.location.href = 'imagewait.html';
             });
         });
     </script>
