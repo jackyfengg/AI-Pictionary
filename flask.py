@@ -4,6 +4,7 @@ from IPython.display import Image, display
 import flask
 import json
 from flask_cors import CORS
+
 app = Flask('backend')
 
 
