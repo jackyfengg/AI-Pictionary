@@ -9,12 +9,7 @@ from flask_cors import CORS
 app = Flask('backend')
 CORS(app)
 
-# prompt sent in from users
 prompt = "[insert prompt]"
-
-# @app.route("/")
-# def hello():
-#     return Image(url=response.data[0].url)
 
 @app.route('/data', methods=["GET"])
 def users():
