@@ -36,6 +36,7 @@
     <!-- Button -->
     <button id="submitButton">Submit</button>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             // Get references to the text field and button elements.
@@ -47,8 +48,18 @@
                 // Get the value from the text field.
                 var enteredText = textField.value;
 
-                // Perform your desired action with the entered text.
-                alert('Entered Text: ' + enteredText);
+                $.ajax({
+                    url: '/data', 
+                    type: 'POST', 
+                    data: {'data' : enteredText}, 
+                    success: function(response) {
+                        // get GPT generated image
+                        console.log(response);
+                    }, 
+                    error: function(error) {
+                        console.log(error);
+                    }
+                });
             });
         });
     </script>
