@@ -10,9 +10,8 @@ app = Flask('backend')
 CORS(app)
 
 @app.route('/data', methods=['POST'])
-
 def imageretrival():
-        prompt = request.json['data']
+        prompt = request.form.get('data')
         return ai.imagenerator(prompt)
 
 if __name__ == "__main__":
