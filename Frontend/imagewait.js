@@ -1,6 +1,7 @@
 
 let test = 0;
 let mark = 0;
+const rounds = 4;
 let images = [];
 const prompts = ["Hidden forest door with glowing symbols nearby",
 "Future city has floating boards and holograms",
@@ -23,6 +24,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 data: { 'data': "reet"}, 
                 success: function(response) { 
                     console.log(response);
+                    window.newImage = response;
+                    images[test] = response; //!!!
+                    test = test + 1;
+                    if (test == rounds) {
+                    window.location.href = 'endscreen.html';
+                    } else {
+                    window.location.href = 'imageguess.html';
+                }
                 }, 
                 error: function(error) { 
                     console.log(error); 
@@ -41,33 +50,6 @@ document.addEventListener('DOMContentLoaded', function () {
         // randomInteger = Math.floor(Math.random() * 10); 
         window.curr = prompts[test]; //!!!
         console.log(curr);
-        try {   
-            // Fetch the backend signal.
-            const response = await fetch(signalEndpoint);
-
-            if (!response.ok) {//!!! fetch api needed???
-                throw new Error('Failed to fetch signal');
-            }
-
-            // Assuming the backend responds with a JSON object.
-            const data = await response.json(); //!!!
-
-            // Check if there is new information (modify this condition based on your backend response).
-            if (data && data.newInformation) {
-                // Navigate to the new webpage.
-
-                window.globalVar = data; //!!!
-                images[test] = data; //!!!
-                test = test + 1;
-                if (test == playernum) {
-                    window.location.href = 'endscreen.html';
-                } else {
-                    window.location.href = 'imageguess.html';
-                }
-            }
-        } catch (error) {
-            console.error('Error fetching signal:', error);
-        }
     };
 
     // Call the function to check for the signal and navigate.

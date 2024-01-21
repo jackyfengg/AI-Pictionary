@@ -13,8 +13,8 @@ CORS(app)
 def imageretrival():
         print("imageretrival endpoint reached")
         prompt = request.form.get('data')
-        response = ai.imagenerator(prompt)
-        return response
+        #response = ai.imagenerator(prompt)
+        return "reet"
 
 if __name__ == "__main__":
     app.run(debug=True)
