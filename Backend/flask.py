@@ -16,4 +16,4 @@ def imageretrival():
         return ai.imagenerator(prompt)
 
 if __name__ == "__main__":
-    app.run("localhost", 6969)
+    app.run(debug=True)
