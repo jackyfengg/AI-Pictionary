@@ -6,7 +6,7 @@ import json
 OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY', "API NOT FOUND")
 
 client = OpenAI()
-
+  
 def imagenerator (message): 
   response = client.images.generate(
     model="dall-e-2",   
