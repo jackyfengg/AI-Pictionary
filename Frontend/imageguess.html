@@ -50,7 +50,12 @@
             submitButton.addEventListener('click', function () {
                 // Get the value from the text field.
                 var enteredText = textField.value;
-
+                var score = 0;//!!
+                if (enteredText === window.curr) {
+                    window.score++;
+                    console.log("score: " + score.toString());//!!!
+                }
+                
                 fetch('/data', {
                     method: 'POST',
                     headers: {'Content-Type': 'text/plain'},

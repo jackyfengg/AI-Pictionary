@@ -1,11 +1,22 @@
+
 let test = 0;
-let playernum = 3;
+let mark = 0;
 let images = [];
+const prompts = ["Hidden forest door with glowing symbols nearby",
+"Future city has floating boards and holograms",
+"Underwater scene features fish in tiny hats",
+"Dancing robots in a colorful, bright club",
+"Cloud library holds books revealing universe's secrets",
+"Enchanted garden has moonlit flowers playing soft music",
+"Steampunk balloon race features imaginative creatures",
+"Universe where gravity changes and things float",
+"Big turtle carries a city on its back",
+"Time-travel train station goes to different times"];
 
 document.addEventListener('DOMContentLoaded', function () {
     // Assuming your backend signal endpoint is '/api/signal'.
     const signalEndpoint = '/data';
-
+    
     $.ajax({ 
                 url: 'http://127.0.0.1:5000/data', 
                 type: 'POST', 
@@ -18,9 +29,19 @@ document.addEventListener('DOMContentLoaded', function () {
                 } 
                 }); 
 
-    // Function to handle navigation to a new webpage.
+    // function shuffleArray(array) {
+    //     for (let i = array.length - 1; i > 0; i--) {
+    //         const j = Math.floor(Math.random() * (i + 1));
+    //         // Swap array[i] and array[j]
+    //         [array[i], array[j]] = [array[j], array[i]];
+    //     }
+    // }
+
     const navigateToImageGuess = async () => {
-        try {
+        // randomInteger = Math.floor(Math.random() * 10); 
+        window.curr = prompts[test]; //!!!
+        console.log(curr);
+        try {   
             // Fetch the backend signal.
             const response = await fetch(signalEndpoint);
 
