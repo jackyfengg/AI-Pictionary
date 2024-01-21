@@ -3,7 +3,7 @@ import os
 from openai import OpenAI
 from IPython.display import Image, display
 # import flask
-# import json
+import json
 # from flask_cors import CORS
 
 # response = client.images.generate(
@@ -19,8 +19,7 @@ print(OPENAI_API_KEY)
 
 client = OpenAI()
 
-def imagenerator (message): 
-  
+def image_generator (message): 
   response = client.images.generate(
   model="dall-e-2",   
   prompt=message,
@@ -28,5 +27,6 @@ def imagenerator (message):
   size="256x256"
   
 )
-  return response
+  img_data = {"url" : response.data[0].url}
+  return json.dumps(img_data)
   

@@ -3,10 +3,14 @@ from openai import OpenAI
 from IPython.display import Image, display
 import flask
 import json
+import ai
 from flask_cors import CORS
 
 app = Flask('backend')
+CORS(app)
 
+# prompt sent in from users
+prompt = "[insert prompt]"
 
 # @app.route("/")
 # def hello():
@@ -14,16 +18,7 @@ app = Flask('backend')
 
 @app.route('/data', methods=["GET"])
 def users():
-    with open("data.json", "r") as databit:
-        data = json.load(databit)
-        data.append({
-
-        })
-
-        CORS(app)
-        CORS(app)
-        
-    return flask.jsonify(data)
+    return ai.image_generator(prompt)
 
 if __name__ == "__main__":
     app.run("localhost", 6969)
