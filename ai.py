@@ -15,18 +15,18 @@ import json
 # )
 
 OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY', "API NOT FOUND")
-print(OPENAI_API_KEY)
 
 client = OpenAI()
 
-def image_generator (message): 
+def imagenerator (message): 
   response = client.images.generate(
-  model="dall-e-2",   
-  prompt=message,
-  n=1,
-  size="256x256"
-  
-)
+    model="dall-e-2",   
+    prompt=message,
+    n=1,
+    size="256x256"
+  )
+
   img_data = {"url" : response.data[0].url}
   return json.dumps(img_data)
+  
   

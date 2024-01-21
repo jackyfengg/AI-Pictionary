@@ -18,7 +18,7 @@ prompt = "[insert prompt]"
 
 @app.route('/data', methods=["GET"])
 def users():
-    return ai.image_generator(prompt)
+    return ai.imagenerator(prompt)
 
 if __name__ == "__main__":
     app.run("localhost", 6969)
