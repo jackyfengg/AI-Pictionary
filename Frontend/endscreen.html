@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Change Button</title>
+</head>
+<body>
+
+    <!-- Two Lines of Text -->
+    <p>This is the first line of text.</p>
+    <p>This is the second line of text.</p>
+
+    <!-- File Input and Button -->
+    <input type="file" id="fileInput" style="display: none;">
+    <button onclick="changeFile()">Change File</button>
+
+    <script>
+        function changeFile() {
+            // Trigger click on the file input element
+            document.getElementById('fileInput').click();
+
+            // Add an event listener to handle file selection
+            document.getElementById('fileInput').addEventListener('change', function() {
+                // Access the selected file
+                const selectedFile = this.files[0];
+
+                // Perform your desired action with the selected file
+                alert('Selected file: ' + selectedFile.name);
+            });
+        }
+    </script>
+
+</body>
+</html>

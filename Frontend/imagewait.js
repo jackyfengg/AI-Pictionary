@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 images[test] = data; //!!!
                 test = test + 1;
                 if (test == playernum) {
-                    window.location.href = 'imagedisplay.html';
+                    window.location.href = 'endscreen.html';
                 } else {
                     window.location.href = 'imageguess.html';
                 }
