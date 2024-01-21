@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image, TextField, and Button Example</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+
+        #imageContainer {
+            margin-top: 20px;
+        }
+
+        #textContainer {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Guess the Prompt for the Image</h1>
+
+    <!-- Picture -->
+    <div id="imageContainer">
+        <img src="https://via.placeholder.com/300" alt="Sample Image" width="300" height="200">
+    </div>
+
+    <!-- Text Field -->
+    <div id="textContainer">
+        <label for="textField">Prompt:</label>
+        <input type="text" id="textField">
+    </div>
+
+    <!-- Button -->
+    <button id="submitButton">Submit</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get references to the text field and button elements.
+            var textField = document.getElementById('textField');
+            var submitButton = document.getElementById('submitButton');
+
+            // Add an event listener to the button.
+            submitButton.addEventListener('click', function () {
+                // Get the value from the text field.
+                var enteredText = textField.value;
+
+                // Perform your desired action with the entered text.
+                alert('Entered Text: ' + enteredText);
+            });
+        });
+    </script>
+</body>
+</html>
