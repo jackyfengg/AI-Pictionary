@@ -51,17 +51,39 @@
                 // Get the value from the text field.
                 var enteredText = textField.value;
 
-                $.ajax({ 
-                url: '/data', 
-                type: 'POST', 
-                data: { 'data': enteredText}, 
-                success: function(response) { 
-                    console.log(response);
-                }, 
-                error: function(error) { 
-                    console.log(error); 
-                } 
-            }); 
+                fetch('/data', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'text/plain'},
+                    body: enteredText,
+                })
+
+                .then(response => {
+                // Handle the response
+                return response.json()
+                })
+
+                .then(data => {
+                // Assuming the server sends back an object with an 'imageUrl' property
+                // Update the image source with the received URL
+                sampleImage.src = data.imageUrl;
+            })
+
+                .catch(error => {
+                console.error('Error:', error);
+                });
+
+
+                // $.ajax({ 
+                // url: '/data', 
+                // type: 'POST', 
+                // data: { 'data': enteredText}, 
+                // success: function(response) { 
+                //     console.log(response);
+                // }, 
+                // error: function(error) { 
+                //     console.log(error); 
+                // } 
+                // }); 
 
                 // Perform your desired action with the entered text.
                 //alert('Entered Text: ' + enteredText);

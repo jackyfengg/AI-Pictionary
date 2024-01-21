@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, jsonify
 from openai import OpenAI
 from IPython.display import Image
 import flask
@@ -11,8 +11,10 @@ CORS(app)
 
 @app.route('/data', methods=['POST'])
 def imageretrival():
-        prompt = request.form.get('data')
-        return ai.imagenerator(prompt)
+        print("imageretrival endpoint reached")
+        prompt = request.get_json()
+        response = ai.imagenerator(prompt)
+        return jsonify(response)
 
 if __name__ == "__main__":
     app.run(debug=True)
