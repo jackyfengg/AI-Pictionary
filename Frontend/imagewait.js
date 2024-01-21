@@ -15,21 +15,24 @@ const prompts = ["Hidden forest door with glowing symbols nearby",
 "Time-travel train station goes to different times"];
 
 document.addEventListener('DOMContentLoaded', function () {
+    var globalResponse
     // Assuming your backend signal endpoint is '/api/signal'.
     const signalEndpoint = '/data';
     
     $.ajax({ 
                 url: 'http://127.0.0.1:5000/data', 
                 type: 'POST', 
-                data: { 'data': "reet"}, 
+                data: { 'data': "a baby seal"}, 
                 success: function(response) { 
                     console.log(response);
+
                     window.newImage = response;
                     images[test] = response; //!!!
                     test = test + 1;
                     if (test == rounds) {
                     window.location.href = 'endscreen.html';
                     } else {
+                    localStorage.setItem('globalResponse', response);
                     window.location.href = 'imageguess.html';
                 }
                 }, 
