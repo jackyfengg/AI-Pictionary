@@ -1,20 +1,23 @@
-from flask import Flask
+# from flask import Flask
+import os
 from openai import OpenAI
 from IPython.display import Image, display
-import flask
-import json
-from flask_cors import CORS
+# import flask
+# import json
+# from flask_cors import CORS
 
-OpenAI.api_key = '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'
+# response = client.images.generate(
+#     model="dall-e-3", 
+#     prompt="[insert prompt]",
+#     size="1024x1024", 
+#     quality="standard", 
+#     n=1,
+# )
+
+OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY', "API NOT FOUND")
+print(OPENAI_API_KEY)
+
 client = OpenAI()
-
-response = client.images.generate(
-    model="dall-e-3", 
-    prompt="[insert prompt]",
-    size="1024x1024", 
-    quality="standard", 
-    n=1,
-)
 
 completion = client.chat.completions.create(
   model="gpt-3.5-turbo",
@@ -23,3 +26,5 @@ completion = client.chat.completions.create(
     {"role": "user", "content": "Compose a poem that explains the concept of recursion in programming."}
   ]
 )
+
+print(completion.choices[0].message)
