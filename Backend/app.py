@@ -9,12 +9,12 @@ from flask_cors import CORS
 app = Flask('backend')
 CORS(app)
 
-@app.route('/data', methods=['POST'])
+@app.route('/data', methods=['GET', 'POST'])
 def imageretrival():
         print("imageretrival endpoint reached")
-        prompt = request.get_json()
+        prompt = request.form.get('data')
         response = ai.imagenerator(prompt)
-        return jsonify(response)
+        return response
 
 if __name__ == "__main__":
     app.run(debug=True)

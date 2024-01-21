@@ -15,7 +15,7 @@ def imagenerator (message):
     size="256x256"
   )
 
-  img_data = {"url" : response.data[0].url}
-  return json.dumps(img_data)
+  #img_data = {"url" : response.data[0].url}
+  return response.data[0].url
   
   
