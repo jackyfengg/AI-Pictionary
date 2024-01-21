@@ -2,7 +2,6 @@
 import os
 from openai import OpenAI
 from IPython.display import Image, display
-import json
 
 # response = client.images.generate(
 #     model="dall-e-3", 
@@ -24,6 +23,6 @@ def imagenerator (message):
     size="256x256"
   )
 
-  return json.dumps(response)
+  return response
   
   

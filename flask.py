@@ -7,7 +7,6 @@ from flask_cors import CORS
 
 app = Flask('backend')
 
-
 # @app.route("/")
 # def hello():
 #     return Image(url=response.data[0].url)
