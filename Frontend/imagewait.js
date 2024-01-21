@@ -6,6 +6,18 @@ document.addEventListener('DOMContentLoaded', function () {
     // Assuming your backend signal endpoint is '/api/signal'.
     const signalEndpoint = '/data';
 
+    $.ajax({ 
+                url: 'http://127.0.0.1:5000/data', 
+                type: 'POST', 
+                data: { 'data': "reet"}, 
+                success: function(response) { 
+                    console.log(response);
+                }, 
+                error: function(error) { 
+                    console.log(error); 
+                } 
+                }); 
+
     // Function to handle navigation to a new webpage.
     const navigateToImageGuess = async () => {
         try {
