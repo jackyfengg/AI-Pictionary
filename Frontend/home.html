@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title and Button Example</title>
+</head>
+<body>
+    <h1>AI Telephone</h1>
+    <button id="startButton">Start Game</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get reference to the button element.
+            var startButton = document.getElementById('startButton');
+
+            // Add an event listener to the button.
+            startButton.addEventListener('click', function () {
+                // Define the action to be performed when the button is clicked.
+                window.location.href = 'imageprompt.html';
+                // alert('Button clicked! Perform your action here.')  ;
+            });
+        });
+    </script>
+</body>
+</html>
