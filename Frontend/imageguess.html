@@ -24,7 +24,7 @@
 
     <!-- Picture -->
     <div id="imageContainer">
-        <img src="https://via.placeholder.com/300" alt="Sample Image" width="300" height="200">
+        <img id="sampleImage" alt="Sample Image" width="256" height="256">
     </div>
 
     <!-- Text Field -->
@@ -37,10 +37,14 @@
     <button id="submitButton">Submit</button>
 
     <script>
+        
         document.addEventListener('DOMContentLoaded', function () {
             // Get references to the text field and button elements.
             var textField = document.getElementById('textField');
             var submitButton = document.getElementById('submitButton');
+
+            sampleImage.src = window.globalVar;//!!! window.globalVar is 
+            //not in brackets and might not load
 
             // Add an event listener to the button.
             submitButton.addEventListener('click', function () {
