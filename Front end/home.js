@@ -6,6 +6,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // Add an event listener to the button.
     navigateButton.addEventListener('click', function () {
         // Navigate to another webpage when the button is clicked.
-        window.location.href = 'anotherPage.html';
+        window.location.href = 'imageguess.html';
     });
 });

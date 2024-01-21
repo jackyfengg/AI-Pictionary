@@ -1,0 +1,36 @@
+
+
+const test = 0;
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Assuming your backend signal endpoint is '/api/signal'.
+    const signalEndpoint = '/api/signal';
+
+    // Function to handle navigation to a new webpage.
+    const navigateToImageGuess = async () => {
+        try {
+            // Fetch the backend signal.
+            const response = await fetch(signalEndpoint);
+
+            if (!response.ok) {
+                throw new Error('Failed to fetch signal');
+            }
+
+            // Assuming the backend responds with a JSON object.
+            const data = await response.json();
+
+            // Check if there is new information (modify this condition based on your backend response).
+            if (data && data.newInformation) {
+                // Navigate to the new webpage.
+                test = test + 1;
+                window.location.href = 'imageguess.html';
+            }
+        } catch (error) {
+            console.error('Error fetching signal:', error);
+        }
+    };
+
+    // Call the function to check for the signal and navigate.
+    navigateToImageGuess();
+});
