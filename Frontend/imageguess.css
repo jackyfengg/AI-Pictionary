@@ -38,7 +38,7 @@ h1 {
 
 label {
     font-size: 18px;
-    color: #333;
+    color: #fff7f7;
 }
 
 #textField {
@@ -48,6 +48,7 @@ label {
     font-size: 16px;
     background-color: #333;
     color:#fff;
+    
 }
 
 #submitButton {
