@@ -1,0 +1,47 @@
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #2d9fcc, #23d52c);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 35px;
+    margin-top: 165px;
+}
+
+#loadingContainer {
+    margin-top: 20px;
+}
+
+#loadingSpinner {
+    display: inline-block;
+    width: 65px;
+    height: 65px;
+    border: 5px solid #3498db;
+    border-top: 5px solid #f3f3f3;
+    border-radius: 50%;
+    animation: rotate 1s linear infinite;
+}
+
+#imageContainer {
+    margin-top: 20px;
+}
+

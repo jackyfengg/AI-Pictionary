@@ -4,16 +4,10 @@ body, h1, button {
     padding: 0;
 }
 
-/* Apply a background color to the body */
-body {
-    background-color: #ffffff;
-    font-family: 'Arial', sans-serif;
-}
-
 /* Style the header */
 h1 {
     text-align: center;
-    color: #333;
+    color: #ffffff;
     margin-top: 50px;
 }
 

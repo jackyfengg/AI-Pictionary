@@ -1,0 +1,66 @@
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #2d9fcc, #23d52c);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+h1 {
+    color: #ffffff;
+    margin-top: 50px;
+    font-size: 24px;
+}
+
+#imageContainer {
+    margin-top: 20px;
+}
+
+#sampleImage {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#textContainer {
+    margin-top: 20px;
+}
+
+label {
+    font-size: 18px;
+    color: #333;
+}
+
+#textField {
+    width: 80%;
+    padding: 8px;
+    margin-top: 8px;
+    font-size: 16px;
+    background-color: #333;
+    color:#fff;
+}
+
+#submitButton {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#submitButton:hover {
+    background-color: #2980b9;
+}
