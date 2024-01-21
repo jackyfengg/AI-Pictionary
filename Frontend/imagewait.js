@@ -4,7 +4,7 @@ let images = [];
 
 document.addEventListener('DOMContentLoaded', function () {
     // Assuming your backend signal endpoint is '/api/signal'.
-    const signalEndpoint = '/api/signal';
+    const signalEndpoint = '/data';
 
     // Function to handle navigation to a new webpage.
     const navigateToImageGuess = async () => {
