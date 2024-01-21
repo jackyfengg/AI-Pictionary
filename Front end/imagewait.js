@@ -1,8 +1,5 @@
-
-
 const test = 0;
-
-
+const playernum = 3;
 document.addEventListener('DOMContentLoaded', function () {
     // Assuming your backend signal endpoint is '/api/signal'.
     const signalEndpoint = '/api/signal';
@@ -13,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // Fetch the backend signal.
             const response = await fetch(signalEndpoint);
 
-            if (!response.ok) {
+            if (!response.ok) {//!!! fetch api needed???
                 throw new Error('Failed to fetch signal');
             }
 
@@ -24,7 +21,11 @@ document.addEventListener('DOMContentLoaded', function () {
             if (data && data.newInformation) {
                 // Navigate to the new webpage.
                 test = test + 1;
-                window.location.href = 'imageguess.html';
+                if (test == playernum) {
+                    window.location.href = 'imageguess.html';
+                } else {
+                    window.location.href = 'imageguess.html';
+                }
             }
         } catch (error) {
             console.error('Error fetching signal:', error);
