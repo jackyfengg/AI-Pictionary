@@ -67,7 +67,7 @@
                 var feedbackElement = document.getElementById('feedback');
                 if (correct) {
                     feedbackElement.textContent = 'Correct!';
-                    feedbackElement.style.color = 'green';
+                    feedbackElement.style.color = '#90EE90';
                 } else {
                     feedbackElement.textContent = 'Not Correct!';
                     feedbackElement.style.color = '#8B0000';
@@ -81,7 +81,7 @@
 
                 if (enteredText === localStorage.prompt) {
                    var updatedscore = localStorage.score + 1;
-                   updatedscore = parseInt(updatedscore, 10) + 1;
+                   updatedScore = parseInt(updatedscore, 10) + 1;
                    localStorage.setItem('score', updatedScore.toString());
                    updateFeedback(true);
                 } else {
