@@ -1,7 +1,7 @@
 
 let test = 0;
 let mark = 0;
-const rounds = 4;
+const rounds = 2;
 let images = [];
 const prompts = ["Hidden forest door with glowing symbols nearby",
 "Future city has floating boards and holograms",
@@ -32,10 +32,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     window.newImage = response;
                     //images[test] = response; //!!!
+                    
+                    var num = localStorage.getItem('imgNum');
+                    var num2 = parseInt(num, 10) + 1;
+                    localStorage.setItem("imgNum", num2.toString())
 
-                    localStorage.imgNum = Number(localStorage.imgNum) + 1;
-
-                    if (localStorage.imgNum == rounds) {
+                    if (parseInt(localStorage.imgNum, 10) === rounds) {
                     window.location.href = 'endscreen.html';
                     } else {
                     localStorage.setItem('globalResponse', response);

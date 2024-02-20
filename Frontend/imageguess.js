@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var submitButton = document.getElementById('submitButton');
     
     console.log(window.newImage);
+    console.log(parseInt(localStorage.imgNum, 10));
 
     sampleImage.src = "https://www.researchgate.net/publication/2442068/figure/fig1/AS:669445533999110@1536619661371/The-original-Lena-image-at-256-256-pixels-8-bits-per-pixel.ppm";
 
