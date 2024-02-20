@@ -19,6 +19,7 @@
             // Add an event listener to the button.
             startButton.addEventListener('click', function () {
                 // Define the action to be performed when the button is clicked.
+                localStorage.setItem('score', 0);
                 window.location.href = 'imagewait.html';
                 // alert('Button clicked! Perform your action here.')  ;
             });

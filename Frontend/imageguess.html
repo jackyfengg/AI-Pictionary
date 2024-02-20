@@ -66,11 +66,19 @@
             submitButton.addEventListener('click', function () {
                 // Get the value from the text field.
                 var enteredText = textField.value;
-                var score = 0;//!!
+
+                if (enteredText === localStorage.prompt) {
+                   var updatedscore = localStorage.score + 1;
+                   updatedscore = parseInt(updatedscore, 10) + 1;
+                   localStorage.setItem('score', updatedScore.toString());
+                } 
+
                 if (enteredText === window.curr) {
                     window.score++;
                     console.log("score: " + score.toString());//!!!
                 }
+
+                window.location.href = 'imagewait.html';
 
             });
         });
