@@ -32,6 +32,7 @@
     <div id="textContainer">
         <label for="textField">Prompt:</label>
         <input type="text" id="textField">
+        <div id="feedback"></div>
     </div>
 
     <div id="parsedResponse"></div>
@@ -62,6 +63,17 @@
                 }
             }
 
+            function updateFeedback(correct) {
+                var feedbackElement = document.getElementById('feedback');
+                if (correct) {
+                    feedbackElement.textContent = 'Correct';
+                    feedbackElement.style.color = 'black';
+                } else {
+                    feedbackElement.textContent = 'Not Correct';
+                    feedbackElement.style.color = 'black';
+                }
+}
+
             // Add an event listener to the button.
             submitButton.addEventListener('click', function () {
                 // Get the value from the text field.
@@ -71,14 +83,17 @@
                    var updatedscore = localStorage.score + 1;
                    updatedscore = parseInt(updatedscore, 10) + 1;
                    localStorage.setItem('score', updatedScore.toString());
-                } 
+                   updateFeedback(true);
+                } else {
+                    updateFeedback(false);
+                }
 
                 if (enteredText === window.curr) {
                     window.score++;
                     console.log("score: " + score.toString());//!!!
                 }
 
-                window.location.href = 'imagewait.html';
+                setTimeout(function() {window.location.href = 'imagewait.html';}, 3000);
 
             });
         });
