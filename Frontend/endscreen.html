@@ -10,10 +10,11 @@
 
     <!-- Two Lines of Text -->
     <h1>Results Summary<h1>
-    <h1>Score:<h1>
+    <h1 id="score">Score:<h1>
     <button onclick="homepage()">Home</button>
 
     <script>
+        document.getElementById('score').innerHTML = "Score: " + localStorage.score;
         function homepage() {
             // Redirect to home.html
             window.location.href = 'home.html';
