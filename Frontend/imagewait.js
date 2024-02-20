@@ -14,25 +14,33 @@ const prompts = ["Hidden forest door with glowing symbols nearby",
 "Big turtle carries a city on its back",
 "Time-travel train station goes to different times"];
 
+localStorage.imgNum = 0;
+
 document.addEventListener('DOMContentLoaded', function () {
-    var globalResponse
     // Assuming your backend signal endpoint is '/api/signal'.
     const signalEndpoint = '/data';
+
+    var randPrompt = prompts[Math.floor(Math.random() * prompts.length)];
+    prompts.filter(c => !(c === randPrompt));
     
     $.ajax({ 
                 url: 'http://127.0.0.1:5000/data', 
                 type: 'POST', 
-                data: { 'data': "a baby seal"}, 
+                data: { 'data': randPrompt}, 
                 success: function(response) { 
                     console.log(response);
 
                     window.newImage = response;
-                    images[test] = response; //!!!
-                    test = test + 1;
-                    if (test == rounds) {
+                    //images[test] = response; //!!!
+
+                    localStorage.imgNum = Number(localStorage.imgNum) + 1;
+
+                    if (localStorage.imgNum == rounds) {
                     window.location.href = 'endscreen.html';
                     } else {
                     localStorage.setItem('globalResponse', response);
+                    localStorage.setItem('prompt', randPrompt);
+
                     window.location.href = 'imageguess.html';
                 }
                 }, 
