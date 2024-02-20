@@ -35,8 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var enteredText = textField.value;
 
         if (enteredText === localStorage.prompt) {
-           var updatedscore = localStorage.score + 1; 
-           updatedScore = parseInt(updatedscore, 10) + 1;
+           var updatedScore = parseInt(localStorage.score, 10) + 1;
            console.log(updatedScore);
            localStorage.setItem('score', updatedScore.toString());
            updateFeedback(true);
