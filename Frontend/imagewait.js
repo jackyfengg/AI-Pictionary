@@ -14,8 +14,6 @@ const prompts = ["Hidden forest door with glowing symbols nearby",
 "Big turtle carries a city on its back",
 "Time-travel train station goes to different times"];
 
-localStorage.imgNum = 0;
-
 document.addEventListener('DOMContentLoaded', function () {
     // Assuming your backend signal endpoint is '/api/signal'.
     const signalEndpoint = '/data';
@@ -35,9 +33,10 @@ document.addEventListener('DOMContentLoaded', function () {
                     
                     var num = localStorage.getItem('imgNum');
                     var num2 = parseInt(num, 10) + 1;
-                    localStorage.setItem("imgNum", num2.toString())
+                    console.log(parseInt(localStorage.imgNum, 10));
+                    localStorage.setItem('imgNum', num2.toString());
 
-                    if (parseInt(localStorage.imgNum, 10) === rounds) {
+                    if (parseInt(localStorage.imgNum, 10) === rounds + 1) {
                     window.location.href = 'endscreen.html';
                     } else {
                     localStorage.setItem('globalResponse', response);
