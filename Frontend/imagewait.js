@@ -22,9 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 data: {'data': randPrompt}, 
                 success: function(response) { 
 
-                    if (localStorage.getItem('images')) {
-                        images = JSON.parse(localStorage.getItem('images'));
-                    }
+                    var images = JSON.parse(localStorage.getItem('images'));
 
                     images.push(response);
                     localStorage.setItem('images', JSON.stringify(images));

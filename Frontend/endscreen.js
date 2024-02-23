@@ -12,6 +12,8 @@ const displayImagesFromLocalStorage = () => {
     let imagesFromLocalStorage = [];
     imagesFromLocalStorage = JSON.parse(localStorage.getItem('images'));
 
+    console.log(imagesFromLocalStorage);
+
     // Iterate through the images array and update the image elements
     imagesFromLocalStorage.forEach((imageUrl, index) => {
         // Retrieve the image container for the current image

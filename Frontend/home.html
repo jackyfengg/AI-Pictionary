@@ -18,6 +18,9 @@
             startButton.addEventListener('click', function () {
                 localStorage.setItem('score', 0);
                 localStorage.setItem('imgNum', 0);
+                
+                let images = [];
+                localStorage.setItem("images", JSON.stringify(images));
                 window.location.href = 'imagewait.html';
             });
         });
