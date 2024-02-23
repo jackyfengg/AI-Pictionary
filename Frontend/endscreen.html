@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="endscreen.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="endscreen.js"></script>
     <title>File Change Button</title>
 </head>
 <body>
@@ -13,8 +14,27 @@
     <h1 id="score">Score:<h1>
     <button onclick="homepage()">Home</button>
 
+    <div id="imageContainer1">
+        <img id="sampleImage" alt="Sample Image" width="256" height="256">
+    </div>
+
+    <div id="imageContainer2">
+        <img id="sampleImage" alt="Sample Image" width="256" height="256">
+    </div>
+
+    <div id="imageContainer3">
+        <img id="sampleImage" alt="Sample Image" width="256" height="256">
+    </div>
+
+    <div id="imageContainer4">
+        <img id="sampleImage" alt="Sample Image" width="256" height="256">
+    </div>
+
     <script>
         document.getElementById('score').innerHTML = "Score: " + localStorage.score;
+
+        displayImagesFromLocalStorage();
+        
         function homepage() {
             // Redirect to home.html
             window.location.href = 'home.html';

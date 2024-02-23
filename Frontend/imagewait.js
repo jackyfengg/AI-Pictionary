@@ -1,7 +1,3 @@
-
-let test = 0;
-let mark = 0;
-const rounds = 2;
 let images = [];
 const prompts = ["Hidden forest door with glowing symbols nearby",
 "Future city has floating boards and holograms",
@@ -15,7 +11,6 @@ const prompts = ["Hidden forest door with glowing symbols nearby",
 "Time-travel train station goes to different times"];
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Assuming your backend signal endpoint is '/api/signal'.
     const signalEndpoint = '/data';
 
     var randPrompt = prompts[Math.floor(Math.random() * prompts.length)];
@@ -26,17 +21,17 @@ document.addEventListener('DOMContentLoaded', function () {
                 type: 'POST', 
                 data: { 'data': randPrompt}, 
                 success: function(response) { 
-                    console.log(response);
 
-                    window.newImage = response;
-                    //images[test] = response; //!!!
-                
-
-                    if (parseInt(localStorage.imgNum, 10) === rounds + 1) {
-                    //window.location.href = 'endscreen.html';
+                    if (localStorage.getItem('images')) {
+                        images = JSON.parse(localStorage.getItem('images'));
                     }
+
+                    images.push(response);
+                    localStorage.setItem('images', JSON.stringify(images));
+
                     localStorage.setItem('globalResponse', response);
                     localStorage.setItem('prompt', randPrompt);
+                    
 
                     window.location.href = 'imageguess.html';
                 }, 
@@ -45,20 +40,4 @@ document.addEventListener('DOMContentLoaded', function () {
                 } 
                 }); 
 
-    // function shuffleArray(array) {
-    //     for (let i = array.length - 1; i > 0; i--) {
-    //         const j = Math.floor(Math.random() * (i + 1));
-    //         // Swap array[i] and array[j]
-    //         [array[i], array[j]] = [array[j], array[i]];
-    //     }
-    // }
-
-    const navigateToImageGuess = async () => {
-        // randomInteger = Math.floor(Math.random() * 10); 
-        window.curr = prompts[test]; //!!!
-        console.log(curr);
-    };
-
-    // Call the function to check for the signal and navigate.
-    navigateToImageGuess();
 });
