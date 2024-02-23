@@ -37,7 +37,7 @@ h1 {
 }
 
 button {
-    background-color: #3498db;
+    background-color: #9ace47;
     color: #fff;
     padding: 10px 200px;
     font-size: 18px;
@@ -48,7 +48,7 @@ button {
 }
 
 button:hover {
-    background-color: #2980b9;
+    background-color: #88b429;
 }
 
 score {

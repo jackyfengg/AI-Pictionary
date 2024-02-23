@@ -30,7 +30,7 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #3498db;
+    background-color: #9ace47;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -39,7 +39,7 @@ button {
 
 /* Change button color on hover */
 button:hover {
-    background-color: #2980b9;
+    background-color: #88b429;
 }
 
 html, body {
