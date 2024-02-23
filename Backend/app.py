@@ -1,8 +1,4 @@
-from flask import Flask, request, jsonify
-from openai import OpenAI
-from IPython.display import Image
-import flask
-import json
+from flask import Flask, request
 import ai
 from flask_cors import CORS
 

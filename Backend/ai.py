@@ -1,6 +1,5 @@
 import os
 from openai import OpenAI
-import json
 
 OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY', "API NOT FOUND")
 
