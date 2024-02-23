@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
     $.ajax({ 
                 url: 'http://127.0.0.1:5000/data', 
                 type: 'POST', 
-                data: { 'data': randPrompt}, 
+                data: {'data': randPrompt}, 
                 success: function(response) { 
 
                     if (localStorage.getItem('images')) {

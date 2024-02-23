@@ -13,16 +13,12 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Get reference to the button element.
             var startButton = document.getElementById('startButton');
 
-            // Add an event listener to the button.
             startButton.addEventListener('click', function () {
-                // Define the action to be performed when the button is clicked.
                 localStorage.setItem('score', 0);
                 localStorage.setItem('imgNum', 0);
                 window.location.href = 'imagewait.html';
-                // alert('Button clicked! Perform your action here.');
             });
         });
     </script>

@@ -15,28 +15,27 @@
     <button onclick="homepage()">Home</button>
 
     <div id="imageContainer1">
-        <img id="sampleImage" alt="Sample Image" width="256" height="256">
+        <img id="sampleImage" alt="Sample Image" width="128" height="128">
     </div>
 
     <div id="imageContainer2">
-        <img id="sampleImage" alt="Sample Image" width="256" height="256">
+        <img id="sampleImage" alt="Sample Image" width="128" height="128">
     </div>
 
     <div id="imageContainer3">
-        <img id="sampleImage" alt="Sample Image" width="256" height="256">
+        <img id="sampleImage" alt="Sample Image" width="128" height="128">
     </div>
 
     <div id="imageContainer4">
-        <img id="sampleImage" alt="Sample Image" width="256" height="256">
+        <img id="sampleImage" alt="Sample Image" width="128" height="128">
     </div>
 
     <script>
         document.getElementById('score').innerHTML = "Score: " + localStorage.score;
 
         displayImagesFromLocalStorage();
-        
+
         function homepage() {
-            // Redirect to home.html
             window.location.href = 'home.html';
         }
     </script>
