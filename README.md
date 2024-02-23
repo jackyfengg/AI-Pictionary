@@ -15,7 +15,7 @@
     2.) git clone: https://github.com/your-username/AI-Pictionary.git
     3.) cd AI-Pictionary
     4.) Go to your environment variable and add your Openai api key: export OPENAI_API_KEY= your-api-key-here
-    6.) bash run.bat
+    6.) bash runmac.batv (mac-only)
     7.) Open home.html with live server
     8.) Enjoy!
 
