@@ -14,7 +14,7 @@
     2.) Install python for VS-code
     2.) git clone: https://github.com/your-username/AI-Pictionary.git
     3.) cd AI-Pictionary
-    4.) Go to your environment variable and add your Openai api key: export OPENAI_API_KEY= your-api-key-here
+    4.) Go to your environment variables directory and add your Openai api key: export OPENAI_API_KEY= your-api-key-here
     6.) Type in command line: 
             mac - bash runmac.bat
             windows - ./runwindows.bat
