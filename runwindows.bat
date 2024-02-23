@@ -1,2 +1,2 @@
 cd Backend
-python app.py
+py -3 app.py
