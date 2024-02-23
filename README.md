@@ -10,7 +10,7 @@
 ## Getting Started
 
     To run:
-    1.) Please install Vs-code live server: https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer    
+    1.) Please install VS-code live server: https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer    
     2.) Install python for VS-code
     2.) git clone: https://github.com/your-username/AI-Pictionary.git
     3.) cd AI-Pictionary
