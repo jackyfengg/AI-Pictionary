@@ -49,7 +49,18 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log("score: " + score.toString());//!!!
         }
 
-        setTimeout(function() {window.location.href = 'imagewait.html';}, 3000);
+        var num = localStorage.getItem('imgNum');
+        var num2 = parseInt(num, 10) + 1;
+        console.log(parseInt(localStorage.imgNum, 10));
+        localStorage.setItem('imgNum', num2.toString());
+
+        setTimeout(function() {
+            if (parseInt(localStorage.imgNum, 10) == 4) {
+                window.location.href = 'endscreen.html';
+            } else {
+                window.location.href = 'imagewait.html';
+            }
+        }, 3000);
 
     });
 });

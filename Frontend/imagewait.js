@@ -30,20 +30,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     window.newImage = response;
                     //images[test] = response; //!!!
-                    
-                    var num = localStorage.getItem('imgNum');
-                    var num2 = parseInt(num, 10) + 1;
-                    console.log(parseInt(localStorage.imgNum, 10));
-                    localStorage.setItem('imgNum', num2.toString());
+                
 
                     if (parseInt(localStorage.imgNum, 10) === rounds + 1) {
-                    window.location.href = 'endscreen.html';
-                    } else {
+                    //window.location.href = 'endscreen.html';
+                    }
                     localStorage.setItem('globalResponse', response);
                     localStorage.setItem('prompt', randPrompt);
 
                     window.location.href = 'imageguess.html';
-                }
                 }, 
                 error: function(error) { 
                     console.log(error); 
