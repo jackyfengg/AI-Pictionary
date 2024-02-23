@@ -14,8 +14,7 @@
     2.) Install python for VS-code
     2.) git clone: https://github.com/your-username/AI-Pictionary.git
     3.) cd AI-Pictionary
-    4.) Go into your terminal and copy and paste this: nano ~/.bash_profile
-    5.) Copy and paste this into nano editor with your Openai api key: export OPENAI_API_KEY= your-api-key-here
+    4.) Go to your environment variable and add your Openai api key: export OPENAI_API_KEY= your-api-key-here
     6.) bash run.bat
     7.) Open home.html with live server
     8.) Enjoy!
